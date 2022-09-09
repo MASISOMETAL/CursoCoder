@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 import { StyleSheet, Text, View, TextInput, Button, FlatList, TouchableOpacity, Modal } from 'react-native';
-import { CustomModal, AddTask} from './Components/index';
+import { CustomModal, AddTask, CustomFlatList} from './Components/index';
 
 export default function App() {
   const [task, setTask] = useState('');
@@ -53,8 +53,7 @@ export default function App() {
         textButton= 'ADD'
         color= "#4979C8"
       />
-      <FlatList
-        style={styles.itemList}
+      <CustomFlatList
         data={tasks}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
@@ -115,11 +114,6 @@ const styles = StyleSheet.create({
   item: {
     fontSize: 16,
     color: '#000000',
-  },
-  itemList: {
-    flex: 1,
-    marginVertical: 20,
-    marginHorizontal: 20,
   },
   delete: {
     fontSize: 18,
