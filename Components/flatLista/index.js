@@ -4,7 +4,7 @@ import { styles } from "./styles";
 
 const CustomFlatList = ({children, data, renderItem, item}) => {
     return (
-        <FlatList
+      <FlatList
         style={styles.itemList}
         data={data}
         renderItem={renderItem}

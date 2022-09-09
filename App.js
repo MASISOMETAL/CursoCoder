@@ -57,7 +57,7 @@ export default function App() {
         data={tasks}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
-        showsVerticalScrollIndicator={false}
+        showsScroll={false}
       />
       <CustomModal animationType='slide' visible={modalVisible}>
         <View style={styles.modalContainer}>
@@ -98,9 +98,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 10,
-    backgroundColor: '#9F84BD',
+    backgroundColor: '#4573BE',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    paddingVertical: 10,
     borderRadius: 5,
     shadowColor: "#000",
     shadowOffset: {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   item: {
     fontSize: 16,
-    color: '#000000',
+    color: '#ffffff',
   },
   delete: {
     fontSize: 18,
@@ -148,8 +148,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   button: {
-    backgroundColor: '#4A306D',
-    padding: 10,
+    backgroundColor: '#000000',
+    //padding: 10,
+    height: 35,
+    width: 35,
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 10,
   }
 });
